@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+//////////////////////////////////////////
+INICIO NAV BAR
+//////////////////////////////////////////
+*/
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+nav{
+    background-color: #100B00;
+    padding: 20px 0 20px 0;
+    font-size: 22px;
+    border: none;
+    border-width: 0;
+    height: 80px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: auto 40px;
+}
+
+nav ul li a{
+    color: #F5F5F5;
+}
+
+#tabActual {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+#navIzquierda{
+    width: 15%;
+    float: left;
+    text-align: center;
+    padding-left: 70px;
+}
+
+#navIzquierda a{
+    color: #F5F5F5;
+    font-size: 25px;
+}
+
+#navCentro{
+    float: left;
+    width: 70%;
+    padding-top: 25px;
+}
+
+
+#navCentro ul li a:hover{
+    font-weight: 800;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+#navDerecha{
+    float: right;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navDerecha a{
+    color: #F5F5F5;
+    padding: 0px 20px;
+}
+
+#cerrarSesion {
+    font-size: 16px;
+}
+
+#imgPerfil{
+    width: 54px;
+}
+
+/*FIN NAV BAR*/
+/*body*/
+
+body{
+    background-image: url(../img/jirasin-yossri-W_29nYyiIpA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #F5F5F5;
+    position: relative;
+    top: 50px;
+}
+
+/*body*/
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin-bottom: 30px;
+    font-family: 'Open Sans';
+    color: #F5F5F5;
+    margin-top: 40px;
+}
+
+label{
+    font-size: 1.2em;
+    color: #F5F5F5;
+    align-self: flex-start;
+}
+
+.formContainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    width: 450px;
+    height: 800px;
+    border-radius: 15px;
+    padding: 30px 60px 40px 60px;
+    margin-top: 34px;
+}
+
+.formContainer h3{
+    font-family: 'Open Sans';
+    font-size: 32px;
+    color: #F5F5F5;
+    font-weight: normal;
+}
+
+.textBox{
+    position: relative;
+    width: 100%;
+    padding: 8px 13px;
+    outline: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border: none;
+    color: #F5F5F5;
+    background-color: #100B00;
+    margin: 10px auto 10px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.textBox::placeholder{
+    color: #F5F5F5;
+    opacity: 0.7;
+}
+
+.textBox:focus{
+    border-color: #100B00;
+    outline: none;
+}
+
+label{
+    font-size: 1.2em;
+    color: #F5F5F5;
+    
+}
+
+#txtrazon{
+    padding-top: 27px;
+    height: 70px;
+    resize: none;
+    
+}
+
+.formContainer h4{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: normal;
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 40px;
+    cursor: pointer;
+}
+
+#btnRegistrar{
+    background-color: #7F167F;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#btnRegistrar1{
+    outline: none;
+    width: 100%;
+    height:50px;
+    border-radius: 10px;
+    background-color: #7F167F;
+    color: #F5F5F5;
+    margin: 0 30px;
+    border: none;
+
+}
+
+/*
+////////////////////////////////////////////////////
+Tabla
+////////////////////////////////////////////////////
+*/
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #F5F5F5;
+    position: relative;
+    top: 50px;
+}
+
+table, td {
+    border: none;
+    text-align: center;
+    margin: auto;
+    color: #100B00;
+    font-weight: 500;
+}
+
+th{
+    position: sticky;
+    top: 0;
+    background-color: rgb(183, 180, 191);
+}
+
+td, th{
+    padding: 15px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blurry(15%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#lista {
+    width: 100%;
+    height: 90vh;
+}
+
+#contenedorLista {
+    width: 80%;
+    height: 60%;
+    margin: 80px auto;
+    overflow-y: scroll;
+    border: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#contenedorLista::-webkit-scrollbar {
+    display: none;
+
+}
+
+#botonesActivos{
+    border: none;
+    border-width: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+    padding: 40px 0 40px 0;
+}
+
+#botonesActivos button {
+    outline: none;
+    width: 160px;
+    height:50px;
+    border-radius: 10px;
+    background-color: #7F167F;
+    color: #F5F5F5;
+    margin: 0 30px;
+}
+
+
+.inputError {
+    border: 2px solid #D70040;
+    background-color: #ffcccb;
+}
+.ocultar {
+    display: none;
+}
+
+.btnsTabla {
+    margin: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+
+.btnsTabla:hover {
+    padding: 8px;
+    /* margin: 8px 0; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    cursor: pointer;
+  }
+
+.imgTabla{
+    max-width: 100%;
+    height: 115px;
+}

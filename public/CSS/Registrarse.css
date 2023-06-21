@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-image: url(../img/jirasin-yossri-W_29nYyiIpA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+form{
+    position: relative;
+    padding: 20px 60px 40px 60px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1 px solid #fff;
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+form h2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin-bottom: 30px;
+    
+}
+
+form div {
+    position: relative;
+}
+
+form div input, form div select, form button {
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    color: #F5F5F5;
+    background-color: #100B00;
+    margin: 12px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+form div input ::placeholder{
+    color: #f5f5f5;
+    opacity: 0.7;
+}
+
+#btnRegistrarForm {
+    background-color: #7F167F;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.inputError {
+    border: 2px solid #D70040;
+    background-color: #ffcccb;
+}
+
+#enlacesLogIn {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#enlacesLogIn a {
+    text-decoration: none;
+    color: #f5f5f5;
+   
+}
+
+label{
+    font-size: 1.2em;
+    color: #F5F5F5;
+    align-self: flex-start;
+}
+
+div::placeholder{
+    color: #8e1919;
+    opacity: 0.7;
+}
+
+#btnSubirFoto{
+    width: 30%;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+#btnSubirFoto img {
+    max-width: 100%;
+}

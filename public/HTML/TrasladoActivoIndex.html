@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traslado</title>
+    <link rel="stylesheet" href="../CSS/TrasladoActivosIndex.css">
+</head>
+<body>
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html" id="tabActual">Traslado</a></li>
+                <li class="noEncargadoUnidad"><a href="./Usuarios.html">Usuarios</a></li>
+                <li class="noEncargadoUnidad"><a href="./Unidades.html">Unidades</a></li>
+                <li><a href="./Reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="../img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <section id="lista" class="noEncargadoUnidad">
+        <h1> Solicitudes de traslado de activos</h1>
+
+        <div id="contenedorLista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID del activo</th>
+                        <th>Nombre de activo</th>
+                        <th>Unidad actual</th>
+                        <th>Unidad solicitada</th>
+                        <th>Estado del activo</th>
+                        <th>Motivo de transferencia</th>
+                        <th>ID de solicitante</th>
+                        <th>Acciones</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaActivos">
+
+  
+                </tbody>
+            </table>
+        </div>
+
+        <div id="botonesActivos">
+            <button type="button" id="btnRegistrar">Registrar</button>
+        </div>
+    </section>
+    
+    <div id='form' class="container ocultar">
+        <div class="formContainer">
+            <h2>Trasladar Activo</h2>
+                <label>Identificación</label>
+                <input placeholder="111111111" class="textBox" type="number" id="txtidentificacion" required/>
+
+                <label>Estado del activo:</label>
+                <select class="textBox" type="text" id="txtactivo" required>
+                    <option value="">Estado del activo:</option>
+                    <option value="Bueno">Bueno</option>
+                    <option value="Desuso">Desuso</option>
+                    <option value="Dañado">Dañado</option>
+                </select>
+                <label>Unidad</label>
+                <select class="textBox" type="text" id="txtunidad" required>
+                    <option value="">Seleccione la unidad:</option>
+                    <!-- <option value="value1">Central</option>
+                    <option value="value2">Bodega</option>
+                    <option value="value3">Donaciones</option>
+                    <option value="value3">Cartago</option> -->
+                </select>
+                <label>Razon de transferencia:</label>
+                <textarea placeholder="Esta roto, tiene defectos, etc.." class="textBox" text="text" id="txtrazon" required></textarea>
+                <h4>Ingrese al menos dos fotos del activo a transferir:</h4>
+                <div class="image-upload" id="imgActivo">
+                    <label for="file-input">
+                    <img src="../img/iconoImagen.png" />
+                    </label>
+                    <input id="file-input" type="file" multiple accept="image/*"/>
+                </div>
+                <button type="button" id="btnRegistrar1">Registrar</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="https://kit.fontawesome.com/ca4924842e.js" crossorigin="anonymous"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <script src="../JS/Services/SubirImagenService.js"></script>
+    <script src="../JS/Controllers/ControllerTrasladoActivos.js"></script>
+    <script src="../JS/Controllers/ControllerListarTraslados.js"></script>
+    <script src="../JS/Controllers/ControllerBitacoraPost.js"></script>
+    <script src="../JS/Controllers/ControllerGestionarTrasladoDeActivo.js"></script>
+
+</body>
+</html>

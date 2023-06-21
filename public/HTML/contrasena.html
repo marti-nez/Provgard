@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/contrasena.css"> -->
+    <link rel="stylesheet" href="../CSS/Usuarios.css">
+    <title>SICA</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li><a href="./Usuarios.html">Usuarios</a></li>
+                <li><a href="./Unidades.html" id="tabActual">Unidades</a></li>
+                <li><a href="./Reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="/public/img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+            <form id="formPw">
+                <div>
+                    <h2 class="titles">Cambiar contraseña</h2>
+                </div>
+                <div class="form-group">
+                    <input name="txtPassword" class="form2" placeholder="Contraseña actual*" type="password" id="contAnt" required>
+                </div>
+                <div class="form-group">
+                    <input class="form2" name="txtNewPass" placeholder="Nueva contraseña*" type="password" id="nuevaCont" required>
+                </div>
+
+                <div class="form-group">
+                    <input class="form2" name="txtNewPassConf" placeholder="Confirmar nueva contraseña*" type="password" id="confirCont" required>
+                </div>
+
+                <button class="btn" id="btnRegistrarCont">Enviar</button>
+                <div id="enlacesLogIn">
+                    <a href="perfil.html">Regresar</a>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../JS/Services/SessionService.js"></script>
+        <script src="../JS/Services/GeneralService.js"></script>
+        <script src="../JS/Controllers/ControllerContrasena.js"></script>
+
+</body>
+
+</html>

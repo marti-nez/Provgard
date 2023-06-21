@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Usuarios.css">
+    <title>Editar</title>
+</head>
+<body>
+    <!-- Header donde va a estar contenida la barra de navegación -->
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li><a href="./Usuarios.html">Usuarios</a></li>
+                <li><a href="./Unidades.html">Unidades</a></li>
+                <li><a href="./Reportes.html" id="tabActual">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="../img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <section>
+
+        <form action="" id="formEditarUsuario" class="ocultar">
+            <h2 id="titleForm">Editar Usuario</h2>
+
+            <div>
+                <label>Nombre</label>
+                <input type="text" id="txtNombre" required>
+            </div>
+            <div>
+                <label>Primer apellido</label>
+                <input type="text" id="txtPrimerApellido" placeholder="Guzman" required>
+            </div>
+            <div>
+                <label>Segundo apellido</label>
+                <input type="text" id="txtSegundoApellido" placeholder="Quirós">
+            </div>
+            <div>
+                <label>Tipo de Identificación</label>
+                <select id="slctTipoIdentificacion" required>
+                    <option value="">Seleccione tipo de identificación</option>
+                    <option value="1">Física</option>
+                    <option value="2">Jurídica</option>
+                    <option value="3">DIMEX</option>
+                    <option value="4">Pasaporte</option>
+                </select>
+            </div>
+            <div>
+                <label>Número de Identificación</label>
+                <input type="number" id="numIdentificacion" min="0" placeholder="111111111" required>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" id="txtCorreo" placeholder="Correo electronico*" required>
+            </div>
+            <div>
+                <!-- <input type="text" id="txtCodigoPais" placeholder="+506"> se debe agregar-->
+                <label>Número de Teléfono</label>
+                <input type="number" id="numTelefono" min="0" max="99999999" placeholder="Numero de telefono*" required>
+            </div>
+            <div>
+                <label>Fecha de nacimiento</label>
+                <input type="date" id="dateNacimiento" required>
+            </div>
+            <div>
+                <label>Unidad</label>
+                <select id="slctUnidad*" required>
+                    <option value="">-- Selecione la unidad --</option>
+                </select>
+            </div>
+            <div>
+                <label>Rol</label>
+                <select id="slctRol" required>
+                    <option value="">Selecione el rol</option>
+                    <option value="1">Jefatura</option>
+                    <option value="2">Proveeduría</option>
+                    <option value="3">Encargado de unidad</option> <!--no estoy seguro-->
+                </select>
+            </div>
+
+            <button type="button" id='btnRegistrarForm'>Actualizar</button>
+        </form>
+
+        <form action="" id="formEditarUnidad" class="ocultar">
+
+            <h2 id="titleForm">Editar unidad</h2>
+
+            <div>
+                <label>Nombre de la Unidad</label>
+                <input type="text" id="txtNombreUd" placeholder="Cartago 1" required>
+            </div>
+            <div>
+                <label>Descripción</label>
+                <input type="text" id="txtDescripcionUd" placeholder="Ejemplo de la unidad" required> <!-- deberia ser text area-->
+            </div>
+            <div>
+                <label>Provincia</label>
+                <select id="slctProvinciaUd" required>
+                    <option value="">-- Seleccione provincia --</option>
+                </select>
+            </div>
+            <div>
+                <label>Canton</label>
+                <select id="slctCantonUd" required>
+                    <option value="">-- Seleccione cantón --</option>
+                </select>
+            </div>
+            <div>
+                <label>Distrito</label>
+                <select id="slctDistritoUd" required>
+                    <option value="">-- Seleccione distrito --</option>
+                </select>
+            </div>
+            <div>
+                <label>Detalles</label>
+                <textarea placeholder="Del puente cañas, 300 metros norte" id="segnasDireccionUd" cols="30" rows="10" required></textarea>
+            </div>
+
+            <button type="button" id='btnRegistrarForm'>Editar</button>
+        </form>
+
+        <form action="" id="formEditarActivo" class="ocultar">
+            <h2 id="titleForm">Editar Activo</h2>
+
+            <div>
+                <label>Nombre</label>
+                <input type="text" id="txtNombreAc" placeholder="Carlos" required>
+            </div>
+            <div>
+                <label>Detalles</label>
+                <input type="textarea" id="txtDetallesAc" placeholder="Computadora Lenovo" required>
+            </div>
+            <div>
+                <label>Unidad</label>
+                <select id="slctUnidadAc">
+                    <option value="">Selecione la unidad</option>
+                    <!-- <option value="1">Central</option>
+                    <option value="2">Bodega</option>
+                    <option value="3">Donaciones</option>
+                    <option value="4">Cartago</option> -->
+                </select>
+            </div>
+            <div>
+                <label for="txtubicacionUnidad">Ubicacion dentro de la unidad</label>
+                <input type="text" id="txtubicacionUnidad" placeholder="Ej: Piso 1" required>
+            </div>
+
+            <button type="button" id='btnRegistrarForm'>Editar</button>
+        </form>
+
+    </section>
+
+    <!-- Enlaces hacia los documentos .js y enlaces externos a ser usados mediante JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <!-- <script src="../JS/Controllers/GestionarUnidadController.js"></script> -->
+    <script src="../JS/Controllers/ProvinciasController.js"></script>
+    <script src="../JS/Controllers/GestionarEdiciones.js"></script>
+
+</body>
+</html>

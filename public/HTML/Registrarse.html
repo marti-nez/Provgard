@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Registrarse.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    <form action="" id="formRegistro">
+        <h2 id="titleForm">Registrar Usuario</h2>
+
+        <div>
+            <label>Nombre</label>
+            <input type="text" id="txtNombre" placeholder="Angelo" required>
+        </div>
+        <div>
+            <label>Primer Apellido</label>
+            <input type="text" id="txtPrimerApellido" placeholder="Quiros*" required>
+        </div>
+        <div>
+            <label>Segundo Apellido</label>
+            <input type="text" id="txtSegundoApellido" placeholder="Lopez">
+        </div>
+        <div>
+            <label>Tipo de Identificacion</label>
+            <select id="slctTipoIdentificacion" required>
+                <option value="">Seleccione Tipo de Identificacion</option>
+                <option value="1">Fisica</option>
+                <option value="2">Juridica</option>
+                <option value="3">DIMEX</option>
+                <option value="4">Pasaporte</option>
+            </select>
+        </div>
+        <div>
+            <label>Número de Identificación</label>
+            <input type="number" id="numIdentificacion" min="0" placeholder="1172845215" required>
+        </div>
+        <div>
+            <label>Correo electrónico</label>
+            <input type="email" id="txtCorreo" placeholder="correo@hotmail.com" required>
+        </div>
+        <div>
+            <!-- <input type="text" id="txtCodigoPais" placeholder="+506"> se debe agregar-->
+            <label>Número de teléfono</label>
+            <input type="number" id="numTelefono" min="0" max="99999999" placeholder="87458962" required>
+        </div>
+        <div>
+            <label>Fecha de nacimiento</label>
+            <input type="date" id="dateNacimiento" required>
+        </div>
+        <div>
+            <label>Unidades</label>
+            <select id="slctUnidad" required>
+                <option value="">Selecione la unidad</option>
+            </select>
+        </div>
+
+        <button type="button" id="btnSubirFoto" onclick="AbrirCloudinary('imgMostrar')">
+            <img src="../img/iconoImagen.png" id="imgMostrar">
+        </button>
+
+        <button type="button" id='btnRegistrarForm'>Registrar</button>
+        <div id="enlacesLogIn">
+            <a href="IniciarSesion.html">Regresar a Iniciar de Sesion</a>
+        </div>
+
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <script src="../JS/Services/SubirImagenService.js"></script>
+    <script src="../JS/Controllers/ControllerRegistrarExterno.js"></script>
+</body>
+</html>

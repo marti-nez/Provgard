@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Perfil.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <!-- Header donde va a estar contenida la barra de navegación -->
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li><a href="./Usuarios.html">Usuarios</a></li>
+                <li><a href="./Unidades.html">Unidades</a></li>
+                <li><a href="./Reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <div id="nav2">
+        <a href="./contrasena.html"><button type="button" id="btnContra">Cambiar contraseña</button></a>
+    </div>
+
+    <div style="float: left;">
+        <div class="image-upload">
+        <label for="file-input">
+        <img id="imgMostrar">
+        </label>
+         </div >
+    </div>
+
+    <div class="DivDerecha">
+    <section id="registrarUnidadForm">
+        <form action="" id="formRegistro">
+            <h2 id="titleForm">Información de usuario</h2>
+
+            <div>
+                <label>Identificación</label>
+                <input type="number" id="txtIdentificacion" placeholder="111111111" required>
+            </div>
+            <div>
+                <label>Nombre</label>
+                 <input type="text" id="txtNombre" placeholder="Angelo" required> <!-- deberia ser text area-->
+            </div>
+            <div>
+                <label>Primer Apellido</label>
+                 <input type="text" id="txtPrimerApellido" placeholder="Quirós" required> <!-- deberia ser text area-->
+            </div>
+            <div>
+                <label>Segundo apellido</label>
+                 <input type="text" id="txtSegundoApellido" placeholder="Quesada"> <!-- deberia ser text area-->
+            </div>
+            <div>
+                <label>Número de Teléfono</label>
+                <input type="number" id="txtTelefono" placeholder="88888888" required>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" id="txtCorreo" placeholder="correo@gmail.com" required>
+            </div>
+            <div>
+                <label>Fecha de nacimiento</label>
+                <input type="date" id="txtFechaNac" placeholder="09/11/1998" required>
+            </div>
+            <div>
+                <label>Unidad</label>
+                <select name="" id="txtUnidad" disabled="true">
+                    <option value="">-- Seleccione la unidad --</option>
+                </select>
+            </div>
+            <div>
+                <label>Rol</label>
+                <select name="" id="rol" disabled="true">
+                    <option value="1">Jefatura</option>
+                    <option value="2">Proveeduría</option>
+                    <option value="1">Encargado de unidad</option>
+                </select>
+            </div>
+            
+    </div> 
+    <div id='botonesUnidades'>  
+
+        <button type="button">Editar</button>
+    </div>    
+        </form>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../JS/Services/SessionService.js"></script>
+        <script src="../JS/Services/GeneralService.js"></script>
+        <script src="../JS/Controllers/ControllerUtils.js"></script>
+        <script src="../JS/Controllers/ControllerPerfil.js"></script>
+</body>

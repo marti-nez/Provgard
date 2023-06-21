@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Usuarios.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li><a href="" id="tabActual">Usuarios</a></li>
+                <li><a href="./Unidades.html">Unidades</a></li>
+                <li><a href="./Reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="../img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <section id="lista">
+        <h1> Solicitudes de registro de usuarios</h1>
+
+        <div id="contenedorLista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Tipo de Identificación</th>
+                        <th>Número de Identificación</th>
+                        <th>Correo electrónico</th>
+                        <th>Teléfono</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Unidad</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="botonesActivos">
+            <button type="button" id="btnRegistrar">Registrar</button>
+        </div>
+    </section>
+
+    <section id="registrarUsuarioForm" class="ocultar">
+
+        <form action="" id="formRegistro">
+            <h2 id="titleForm">Registrar Usuario</h2>
+
+            <div>
+                <label>Nombre</label>
+                <input type="text" id="txtNombre" placeholder="Carlos" required>
+            </div>
+            <div>
+                <label>Primer apellido</label>
+                <input type="text" id="txtPrimerApellido" placeholder="Guzman" required>
+            </div>
+            <div>
+                <label>Segundo apellido</label>
+                <input type="text" id="txtSegundoApellido" placeholder="Quirós">
+            </div>
+            <div>
+                <label>Tipo de Identificación</label>
+                <select id="slctTipoIdentificacion" required>
+                    <option value="">Seleccione tipo de identificación</option>
+                    <option value="1">Física</option>
+                    <option value="2">Jurídica</option>
+                    <option value="3">DIMEX</option>
+                    <option value="4">Pasaporte</option>
+                </select>
+            </div>
+            <div>
+                <label>Número de Identificación</label>
+                <input type="number" id="numIdentificacion" min="0" placeholder="111111111" required>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" id="txtCorreo" placeholder="Correo electronico*" required>
+            </div>
+            <div>
+                <!-- <input type="text" id="txtCodigoPais" placeholder="+506"> se debe agregar-->
+                <label>Número de Teléfono</label>
+                <input type="number" id="numTelefono" min="0" max="99999999" placeholder="Numero de telefono*" required>
+            </div>
+            <div>
+                <label>Fecha de nacimiento</label>
+                <input type="date" id="dateNacimiento" required>
+            </div>
+            <div>
+                <label>Unidad</label>
+                <select id="slctUnidad*" required>
+                    <option value="">Selecione la unidad</option>
+                </select>
+            </div>
+            <div>
+                <label>Rol</label>
+                <select id="slctRol" required>
+                    <option value="">Selecione el rol</option>
+                    <option value="1">Jefatura</option>
+                    <option value="2">Proveeduría</option>
+                    <option value="3">Encargado de unidad</option> <!--no estoy seguro-->
+                </select>
+            </div>
+
+            <button type="button" id='btnRegistrarForm'>Registrar</button>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <script src="../JS/Controllers/ControllerUsuario.js"></script>
+    <script src="../JS/Controllers/GestionarUsuarioController.js"></script>
+
+</body>
+</html>

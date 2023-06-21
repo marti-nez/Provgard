@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Unidades.css">
+    <title>Unidades</title>
+</head>
+<body>
+    <!-- Header donde va a estar contenida la barra de navegación -->
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li><a href="./Usuarios.html">Usuarios</a></li>
+                <li><a href="./Unidades.html" id="tabActual">Unidades</a></li>
+                <li><a href="./Reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="../img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <section id="registrarUnidadForm">
+
+        <form action="" id="formRegistro">
+
+            <h2 id="titleForm">Registrar Unidad</h2>
+
+            <div>
+                <label>Nombre de la Unidad</label>
+                <input type="text" id="txtNombre" placeholder="Cartago 1" required>
+            </div>
+            <div>
+                <label>Descripción</label>
+                <input type="text" id="txtDescripcion" placeholder="Ejemplo de la unidad" required> <!-- deberia ser text area-->
+            </div>
+            <div>
+                <label>Provincia</label>
+                <select id="slctProvincia" required>
+                    <option value="">-- Seleccione provincia --</option>
+                </select>
+            </div>
+            <div>
+                <label>Canton</label>
+                <select id="slctCanton" required>
+                    <option value="">-- Seleccione cantón --</option>
+                </select>
+            </div>
+            <div>
+                <label>Distrito</label>
+                <select id="slctDistrito" required>
+                    <option value="">-- Seleccione distrito --</option>
+                </select>
+            </div>
+            <div>
+                <label>Detalles</label>
+                <textarea placeholder="Del puente cañas, 300 metros norte" id="segnasDireccion" cols="30" rows="10" required></textarea>
+            </div>
+
+            <button type="button" id='btnRegistrarForm'>Registrar</button>
+        </form>
+
+    </section>
+
+    <!-- Enlaces hacia los documentos .js y enlaces externos a ser usados mediante JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <script src="../JS/Controllers/GestionarUnidadController.js"></script>
+    <script src="../JS/Controllers/ControllerUnidades.js"></script>
+    <script src="../JS/Controllers/ControllerProvincias.js"></script>
+
+</body>
+</html>

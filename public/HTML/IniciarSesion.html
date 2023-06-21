@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/IniciarSesion.css">
+    <title>Proveguard S.A.</title>
+</head>
+<body>
+    <h1>Sistema Para Control de Activos (SICA)</h1>
+
+    <form action="" id="formLogIn">
+        <h2>Iniciar sesión</h2>
+        <div>
+            <label>Email</label>
+            <input type="text" placeholder="Ej: correo@gmail.com" id="emailLogIn" required>
+        </div>
+        <div>
+            <label>Contraseña</label>
+            <input type="password" placeholder="Ej: 1234" id="pwdLogIn" required>
+        </div>
+        <button type="button" id="btnLogIn">Iniciar Sesión</button>
+        <div id="enlacesLogIn">
+            <a href="">Olvidé mi contraseña</a>
+            <a href="Registrarse.html">Registrarme</a>
+        </div>
+    </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <!-- <script src="../JS/Services/LogInService.js"></script> -->
+    <script src="../JS/Controllers/ControllerLogIn.js"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+</body>
+</html>

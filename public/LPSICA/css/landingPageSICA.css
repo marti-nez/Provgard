@@ -1,0 +1,149 @@
+/* Menu de navegacion */
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    border-bottom: 3px solid black;  
+    box-sizing: border-box;
+    background-color: #DDF7E3;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    background-color: #7f167f;
+    color: #f5f5f5;
+    padding: 0.5%;
+    border-radius: 30%;
+}
+
+/* ////////////////////////////////////// */
+/* section principal  */
+#principal {
+    display: flex;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+    height: 90vh;
+    width: 100%;
+    font-size: 27px;
+}
+
+.masInfo {
+    font-size: 25px;
+    background-color: #2E4F4F;
+    color: #f5f5f5;
+    border-radius: 25%;
+
+}
+
+.masInfo:hover{
+    background-color: #0E8388;
+}
+
+.info_sica{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 1%;
+}
+
+#imgSica{
+    width: 70%;
+    height: 100%;
+}
+
+.imagen_sica {
+    text-align: center;
+    padding: 2%;
+}
+
+/* ///////////////////////////////////// */
+/* seccion usuarios_activos */
+
+#usuarios_activos {
+    display: flex;
+    border-bottom: 3px solid black;
+}
+
+.usuarios, .activos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding: 2%;
+
+}
+
+.usuarios{
+    border-right: 3px solid black;
+    background-color: #DDF7E3;
+}
+
+#usuarios_img, #activos_img {
+    height: 60%;
+    width: 60%;
+
+}
+
+.titulo_usuario, .titulo_activo {
+    font-size: 30px;
+}
+
+.titulo_usuario_txt, .titulo_activo_txt {
+    font-size: 25px;
+}
+
+/* ///////////////////////////////////////// */
+/* seccion unidades_traslados */
+
+#unidades_traslados {
+    display: flex;
+    border-bottom: 3px solid black;
+}
+
+.unidades, .traslados{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding: 2%;
+}
+
+.unidades{
+    border-right: 3px solid black;
+}
+
+.traslados {
+    background-color:#DDF7E3;;
+}
+
+#unidad_img, #traslados_img {
+    height: 60%;
+    width: 60%;
+
+}
+
+.titulo_unidad, .titulo_traslados {
+    font-size: 30px;
+}
+
+.titulo_traslados_txt, .titulo_unidad_txt {
+    font-size: 25px;
+}

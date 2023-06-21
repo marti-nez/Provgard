@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Reportes.css">
+    <title>Reportes</title>
+</head>
+<body>
+    <!-- Header donde va a estar contenida la barra de navegación -->
+    <header>
+        <nav id="navIzquierda">
+            <a href="./Home.html">PROVEGUARD S.A.</a>
+        </nav>
+        <nav id="navCentro">
+            <ul>
+                <li><a href="./Activos.html">Activos</a></li>
+                <li><a href="./TrasladoActivoIndex.html">Traslado</a></li>
+                <li class="noEncargadoUnidad" ><a href="./Usuarios.html">Usuarios</a></li>
+                <li class="noEncargadoUnidad" ><a href="./Unidades.html">Unidades</a></li>
+                <li><a href="./Reportes.html" id="tabActual">Reportes</a></li>
+            </ul>
+        </nav>
+        <nav id="navDerecha">
+            <a href="./perfil.html"><img src="../img/iconoPerfil.png" alt="" id="imgPerfil"></a>
+            <a href="./IniciarSesion.html" id="cerrarSesion">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <section id="lista">
+        <div id="filtradoDeLista" class="noEncargadoUnidad">
+            <!-- <label for="tipoReporte">Tipo de reporte</label> -->
+            <select id="tipoReporte">
+                <option value="">-- Seleccione un tipo de reporte --</option>
+            </select>
+            <!-- <label for="tipoFiltro">Tipo de filtro</label> -->
+            <select id="tipoFiltro">
+                <option value="">-- Seleccione un filtro --</option>
+            </select>
+            <!-- <label for="filtroTabla">Parametro de busqueda</label> -->
+            <input type="text" placeholder="Parametro de busqueda" id="filtroTabla">
+        </div>
+
+
+        <div id="rangosfecha">
+            <div class="ocultar">
+                <label for="desde" id="desde_fecha">Desde</label>
+                <input type="date" id="desde">
+            </div>
+            <div class="ocultar">
+                <label for="hasta" id="hasta_fecha">Hasta</label>
+                <input type="date" id="hasta">
+                <button type="button" id="btnBuscarRangoFechas">Buscar</button>
+            </div>
+        </div>
+
+         <div id="contenedorLista" class="noEncargadoUnidad"> <!-- este div fue agnadido en la nueva version-->
+            <table id="tablaHeadActivos" class="ocultar"> <!--hace falta poner una columna de imagen? -->
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Codigo</th>
+                        <th>Ubicacion</th>
+                        <th>Unidad</th>
+                        <th>Descripcion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tablaActivos" class="tablaActivo">
+
+                </tbody>
+            </table>
+            <!-- <table id="tablaBitacora" class="ocultar">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Codigo</th>
+                        <th>Ubicacion</th>
+                        <th>Unidad</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaActivos">
+
+                </tbody>
+            </table> -->
+            <table id="tablaUsuarios" class="ocultar"> 
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Tipo de identificación</th>
+                        <th>Identificación</th>
+                        <th>Teléfono</th>
+                        <th>Fecha Nacimiento (año-mes-día)</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Unidad</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuariosBody">
+                </tbody>
+            </table>
+
+            <table id="tablaUnidades" class="ocultar"> <!--hace falta poner una columna de imagen? -->
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Ubicacion</th>
+                        <th>ID</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUnidadesBody">
+                </tbody>
+            </table>
+
+
+<!-- BITACORA, estoy reutilizando las clases del CSS por eso no cambie el nombre de la clase ni la duplique para no hacer mas largo el css -->
+
+        </div>
+    </section>
+
+    <!-- Enlaces hacia los documentos .js y enlaces externos a ser usados mediante JS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/Services/GeneralService.js"></script>
+    <script src="../JS/Services/SessionService.js"></script>
+    <script src="../JS/Controllers/ControllerReportes.js"></script>
+    <script src="../JS/Controllers/ControllerListarTraslados.js"></script>
+    <script src="../JS/Controllers/ControllerListarActivos.js"></script>
+    <script src="../JS/Controllers/GestionarReportesController.js"></script>
+    <script src="../JS/Controllers/ControllerBitacoraPost.js"></script>
+</body>
+</html>
